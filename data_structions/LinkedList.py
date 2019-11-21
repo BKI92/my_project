@@ -51,12 +51,12 @@ class LinkedList:
                     node = node.next
                     old.next = node
                     break
+                else:
+                    old.next = node.next
             old = node
             node = node.next
-
-                # else:
-                #     node = node.next.next.next
-            node = node.next
+            if not all:
+                break
 
     def clean(self):
         self.__init__()
@@ -86,6 +86,7 @@ class LinkedList:
                     node.next = Node(newNode)
                     node.next.next = next_node
                     Node(newNode).next = node.next.next
+                    break
             node = node.next
 
 
@@ -106,13 +107,13 @@ s_list.add_in_tail(Node(5))
 s_list.add_in_tail(Node(128))
 s_list.add_in_tail(Node(77))
 s_list.add_in_tail(Node(128))
-s_list.print_all_nodes()
-print('*'*20)
-s_list.delete(128, all=True)
-s_list.insert(77, 25)
 # s_list.print_all_nodes()
-# s_list.insert(12, 111)
-# s_list.insert(111, 8)
+# print('*'*20)
+# s_list.delete(128, all=False)
+s_list.insert(77, 25)
+s_list.print_all_nodes()
+s_list.insert(12, 111)
+s_list.insert(111, 8)
 s_list.insert(128, 3)
 # print('*'*20)
 s_list.print_all_nodes()
