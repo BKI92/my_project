@@ -71,13 +71,10 @@ with open(file='registrations.txt', mode='r') as file, \
     for line in file:
         try:
             if lv.validation(line):
-                # Для корректной работы программы, лучше будет 1 раз открыть
-                # файл в начале цикла
                 good_log.write(f'{line}')
         except (NotNameError, NotEmailError, ValueError) as exc:
             with open(file='registrations_bad.log', mode='a') as ff:
                 ff.write(f'{exc} in line: {line}')
 
-# Зачет!
 
 
