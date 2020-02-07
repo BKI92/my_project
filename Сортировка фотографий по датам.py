@@ -41,7 +41,6 @@ class ZipTimeSorter(TimeSorter):
         zfile = zipfile.ZipFile(self.normalized_path, 'r')
         for filename in zfile.namelist():
             date = zfile.getinfo(filename).date_time
-            # if 'png' in filename:
             new_path = os.path.join('photos_by_year', str(date[0]),
                                     str(date[1]))
             zfile.extract(filename)
