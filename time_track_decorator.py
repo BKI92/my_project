@@ -16,10 +16,3 @@ def get_time_track(precision):
     return time_track
 
 
-# @get_time_track(2)
-# def ranger(n):
-#     for i in range(n+1):
-#         print(f'{i}, {i**2}, {i**i}')
-#
-#
-# ranger(4000)
