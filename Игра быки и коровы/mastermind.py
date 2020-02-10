@@ -3,7 +3,7 @@
 # Игра «Быки и коровы»
 # https://goo.gl/Go2mb9
 
-from lesson_006.mastermind_engine import get_number, check_number
+from mastermind_engine import get_number, check_number
 from termcolor import cprint, colored
 cprint('Загадано четырехзначное число, попробуй отгадать!', color='green')
 counter = 0
@@ -28,6 +28,3 @@ while True:
         counter += 1
     else:
         cprint('Некорректный ввод!', color='red')
-
-
-# Зачет!
